@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Efficient CPU Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>⚡ Energy-Efficient CPU Scheduling</h1>
+
+    <div class="container">
+
+        <h3>Add Process</h3>
+        <input type="number" id="pid" placeholder="Process ID">
+        <input type="number" id="burst" placeholder="Burst Time">
+        <input type="number" id="priority" placeholder="Priority (1 = High)">
+        <br>
+        <button onclick="addProcess()">Add Process</button>
+
+        <h3>Process List</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Burst Time</th>
+                    <th>Priority</th>
+                </tr>
+            </thead>
+            <tbody id="processTable"></tbody>
+        </table>
+
+        <button onclick="runScheduler()">Run Scheduler</button>
+
+        <h3>Execution Result</h3>
+        <div id="result"></div>
+
+        <h3>Gantt Chart</h3>
+        <div id="ganttChart" class="gantt"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
